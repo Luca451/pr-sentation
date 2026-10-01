@@ -1,0 +1,538 @@
+body {
+  background-color: #121212;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.iphone-border {
+  position: relative;
+  width: 300px;
+  height: 600px;
+  background: #222;
+  border-radius: 40px;
+  padding: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  border: 4px solid #444;
+}
+
+.iphone {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.speaker {
+  width: 60px;
+  height: 6px;
+  background: #333;
+  border-radius: 3px;
+  margin: 12px auto 6px;
+}
+
+#iphone-screen {
+  flex: 1;
+  position: relative;
+  background: linear-gradient(180deg, #1f1c2c, #928dab);
+}
+
+#lock-screen, #passcode-screen, #home-screen {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Lockscreen */
+#clock {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#time {
+  font-size: 48px;
+  font-weight: 200;
+  display: block;
+}
+
+#date {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.unlock-btn {
+  margin-top: 300px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 12px 20px;
+  border-radius: 20px;
+  text-align: center;
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+  font-size: 14px;
+}
+
+/* Passcode Screen */
+.passcode-header {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.dots-container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border: 1.5px solid white;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.dot.active {
+  background-color: white;
+}
+
+#keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.key {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  cursor: pointer;
+  font-size: 18px;
+  user-select: none;
+}
+
+.key small {
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+.key:active {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.action-key {
+  background: transparent;
+}
+
+/* Homescreen */
+.app-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.app-icon {
+  width: 55px;
+  height: 55px;
+  background: #0a84ff;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.app-label {
+  font-size: 11px;
+  margin-top: 4px;
+  width: 55px;
+  text-align: center;
+}
+
+/* Home Button */
+#iphone-home-button {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+
+#square-home-button {
+  width: 35px;
+  height: 35px;
+  border: 2px solid #666;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* App Grid & Icons */
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.app-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.app-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.bg-blue { background: #0a84ff; }
+.bg-green { background: #30d158; }
+.bg-orange { background: #ff9f0a; }
+
+.app-label {
+  font-size: 11px;
+  font-weight: 600;
+  margin-top: 6px;
+  text-align: center;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.);
+}
+
+/* App Bildschirme (Handout & Quiz) */
+.app-screen {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: #1c1c1e;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.screen-header h3 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.screen-content p {
+  font-size: 13px;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.qr-placeholder {
+  background: white;
+  padding: 10px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.qr-placeholder img {
+  width: 150px;
+  height: 150px;
+  display: block;
+}
+
+/* Styling für die Präsentations-Seite */
+.presentation-body {
+  background-color: #0f0f11;
+  color: #fff;
+  display: block;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.presentation-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #1c1c1e;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.slide-content {
+  margin: 30px 0;
+  min-height: 250px;
+}
+
+.slide h2 {
+  color: #0a84ff;
+  margin-bottom: 10px;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #3a3a3c;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.back-btn:hover {
+  background: #48484a;
+}
+
+/* --- HANDY HINTERGRUNDBILD --- */
+#iphone-screen {
+  flex: 1;
+  position: relative;
+  background-image: url('../assets/background-phone.png');
+  background-size: contain;       /* Keinerlei Zoom! Zeigt das komplette Bild */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #000;         /* Schwarzer Hintergrund für eventuelle Ränder */
+}
+
+/* --- PRÄSENTATIONS-LAYOUT & FOLIEN --- */
+.presentation-body {
+  background-color: #0d0e12;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.presentation-container {
+  width: 100%;
+  max-width: 1000px;
+  background: #18191d;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+  border: 1px solid #2d2f36;
+}
+
+.presentation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #2d2f36;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.presentation-header h1 {
+  font-size: 22px;
+  margin: 0;
+  color: #0a84ff;
+}
+
+.slide-counter {
+  font-size: 14px;
+  background: #2a2c34;
+  padding: 6px 14px;
+  border-radius: 12px;
+  color: #aaa;
+}
+
+/* Folie mit 16:9 Seitenverhältnis */
+.slide-content {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Erzwingt perfektes 16:9 Widescreen-Format */
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+
+.slide {
+  display: none;
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-size: 125% 125%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.slide.active-slide {
+  display: block;
+  animation: moveBackground 8s linear infinite alternate;
+}
+
+/* Schnellere Bewegungs-Animation */
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+/* Inhalt über dem Hintergrund gut lesbar halten */
+.slide-inner {
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(8px);
+  padding: 30px;
+  border-radius: 12px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.slide-inner h2 {
+  margin-top: 0;
+  color: #5ac8fa;
+}
+
+/* Navigation Buttons unten */
+.presentation-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-btn {
+  background: #0a84ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.2s, background 0.2s;
+}
+
+.nav-btn:hover {
+  background: #0071e3;
+}
+
+.nav-btn:disabled {
+  background: #3a3a3c;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.back-home {
+  background: #3a3a3c;
+}
+
+.back-home:hover {
+  background: #48484a;
+}
+
+/* 3x Blau für Personen */
+.bg-person-blue {
+  background: linear-gradient(135deg, #007aff, #00c6ff);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 2x Violett für Personen */
+.bg-person-purple {
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* --- HANDOUT STYLING --- */
+.handout-body {
+  background-color: #121214;
+  color: #e4e4e7;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  padding: 20px;
+  margin: 0;
+}
+
+.handout-container {
+  max-width: 650px;
+  margin: 0 auto;
+  background: #18181b;
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid #27272a;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.handout-header {
+  border-bottom: 2px solid #0a84ff;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+}
+
+.handout-header h1 {
+  font-size: 20px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.handout-header .subtitle {
+  color: #a1a1aa;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.handout-section {
+  margin-bottom: 20px;
+}
+
+.handout-section h2 {
+  font-size: 16px;
+  color: #30d158;
+  margin-bottom: 8px;
+}
+
+.handout-section p, .handout-section li {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #d4d4d8;
+}
+
+.handout-footer {
+  border-top: 1px solid #27272a;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 12px;
+  color: #71717a;
+}

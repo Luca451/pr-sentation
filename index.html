@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Referat - Interaktives Handy</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="iphone-border">
+    <div class="iphone">  
+      <div class="speaker"></div>
+      
+      <div id="iphone-screen">
+        
+        <!-- 1. Lockscreen -->
+        <div id="lock-screen">
+          <div id="clock">
+            <span id="time">23:52</span>
+            <span id="date">Mittwoch, 30. September</span>
+          </div>
+          <div class="unlock-btn" id="unlock-trigger">
+            <span>Tippen zum Entsperren</span>
+          </div>
+        </div>
+
+        <!-- 2. Passcode Screen -->
+        <div id="passcode-screen" class="hidden">
+          <div class="passcode-header">
+            <p>Code eingeben</p>
+            <div class="dots-container">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+          </div>
+
+          <div id="keypad">
+            <div class="key" data-value="1">1</div>
+            <div class="key" data-value="2">2<br><small>ABC</small></div>
+            <div class="key" data-value="3">3<br><small>DEF</small></div>
+            <div class="key" data-value="4">4<br><small>GHI</small></div>
+            <div class="key" data-value="5">5<br><small>JKL</small></div>
+            <div class="key" data-value="6">6<br><small>MNO</small></div>
+            <div class="key" data-value="7">7<br><small>PQRS</small></div>
+            <div class="key" data-value="8">8<br><small>TUV</small></div>
+            <div class="key" data-value="9">9<br><small>WXYZ</small></div>
+            <div></div>
+            <div class="key" data-value="0">0</div>
+            <div class="key action-key" id="delete-btn"><i class="fa-solid fa-backspace"></i></div>
+          </div>
+        </div>
+
+<!-- 3. Homescreen -->
+<div id="home-screen" class="hidden">
+  <div class="app-grid">
+    
+    <!-- Haupt-Apps -->
+    <div class="app-item" id="app-website">
+      <div class="app-icon bg-blue">
+        <i class="fa-solid fa-globe"></i>
+      </div>
+      <span class="app-label">Website</span>
+    </div>
+
+    <div class="app-item" id="app-handout">
+      <div class="app-icon bg-green">
+        <i class="fa-solid fa-file-pdf"></i>
+      </div>
+      <span class="app-label">Handout</span>
+    </div>
+
+    <div class="app-item" id="app-quiz">
+      <div class="app-icon bg-orange">
+        <i class="fa-solid fa-gamepad"></i>
+      </div>
+      <span class="app-label">Quiz</span>
+    </div>
+
+    <!-- Gruppenmitglieder (Personen-Icons) -->
+    <div class="app-item">
+        <div class="app-icon bg-person-purple">
+          <i class="fa-solid fa-user"></i>
+      </div>
+      <span class="app-label">Fr. Lorenc</span>
+    </div>
+    
+    <div class="app-item">
+      <div class="app-icon bg-person-purple">
+        <i class="fa-solid fa-user"></i>
+      </div>
+      <span class="app-label">Ayleen</span>
+    </div>
+
+    <div class="app-item">
+      <div class="app-icon bg-person-blue">
+        <i class="fa-solid fa-user"></i>
+      </div>
+      <span class="app-label">Kevin</span>
+    </div>
+
+    <div class="app-item">
+      <div class="app-icon bg-person-blue">
+        <i class="fa-solid fa-user"></i>
+      </div>
+      <span class="app-label">Elia</span>
+    </div>
+
+  
+    <div class="app-item">
+      <div class="app-icon bg-person-blue">
+        <i class="fa-solid fa-user"></i>
+      </div>
+      <span class="app-label">Luca</span>
+    </div>
+
+
+  </div>
+</div>
+
+        <!-- 4. QR-Code Screen für Handout -->
+        <div id="handout-screen" class="app-screen hidden">
+          <div class="screen-header">
+            <h3>Handout QR-Code</h3>
+          </div>
+          <div class="screen-content">
+            <p>Scanne den Code für das Handout:</p>
+            <div class="qr-placeholder">
+              <!-- Platzhalter-Bild für QR-Code -->
+              <img src="assets/qr-handout.png" alt="Handout QR Code" id="qr-handout-img">
+            </div>
+          </div>
+
+        <!-- 4. QR-Code Screen für Handout -->
+        <div id="handout-screen" class="app-screen hidden">
+          <div class="screen-header">
+            <h3>Handout QR-Code</h3>
+          </div>
+          <div class="screen-content">
+            <p>Scanne den Code mit deinem Handy!</p>
+          <div class="qr-placeholder">
+            <img src="" alt="Handout QR Code" id="qr-handout-img">
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <!-- 5. QR-Code Screen für Quiz -->
+        <div id="quiz-screen" class="app-screen hidden">
+          <div class="screen-header">
+            <h3>Abschluss-Quiz</h3>
+          </div>
+          <div class="screen-content">
+            <p>Scanne den Code fürs Quiz:</p>
+            <div class="qr-placeholder">
+              <!-- Platzhalter-Bild für QR-Code -->
+              <img src="assets/qr-quiz.png" alt="Quiz QR Code" id="qr-quiz-img">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Home Button -->
+      <div id="iphone-home-button">
+        <div id="square-home-button"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>
+

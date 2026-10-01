@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Referat - Chronische Eosinophilenleukämie (CEL)</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="presentation-body">
+
+  <div class="presentation-container">
+    <header class="presentation-header">
+      <h1>Chronische Eosinophilenleukämie (CEL)</h1>
+      <div class="slide-counter">Folie <span id="current-slide-num">1</span> / 12</div>
+    </header>
+
+    <main class="slide-content">
+      <!-- FOLIE 1 -->
+      <section class="slide active-slide" id="slide-1" style="background-image: url('assets/background-1.png');">
+        <div class="slide-inner">
+          <h2>Lernfeld 13; Durch Verlaufskurven begleiten</h2>
+          <p>Schraven, Ayleen Monique; Lausten, Kevin Luca; Di Prima, Elia; Barone, Luca Gulian</p>
+          <p>Dozentin: Frau Lorenc, Johanna</p>
+          <p>Kurs 25-April</p>
+        </div>
+      </section>
+
+      <!-- FOLIE 2 -->
+      <section class="slide" id="slide-2" style="background-image: url('assets/background-2.png');">
+        <div class="slide-inner">
+          <h2>Folie 2: Platzhalter</h2>
+          <p>Hier kannst du deinen eigenen Inhalt für Folie 2 einfügen.</p>
+        </div>
+      </section>
+
+      <!-- FOLIE 3 -->
+      <section class="slide" id="slide-3" style="background-image: url('assets/background-3.png');">
+        <div class="slide-inner">
+          <h2>Folie 3: Platzhalter</h2>
+          <p>Hier kannst du deinen eigenen Inhalt für Folie 3 einfügen.</p>
+        </div>
+      </section>
+
+      <!-- FOLIE 4 -->
+      <section class="slide" id="slide-4" style="background-image: url('assets/background-4.png');">
+        <div class="slide-inner">
+          <h2>Folie 4: Platzhalter</h2>
+          <p>Hier kannst du deinen eigenen Inhalt für Folie 4 einfügen.</p>
+        </div>
+      </section>
+
+      <!-- FOLIE 5 -->
+      <section class="slide" id="slide-5" style="background-image: url('assets/background-5.png');">
+        <div class="slide-inner">
+          <h2>Folie 5: Platzhalter</h2>
+          <p>Hier kannst du deinen eigenen Inhalt für Folie 5 einfügen.</p>
+        </div>
+      </section>
+
+      <!-- FOLIE 6 -->
+      <section class="slide" id="slide-6" style="background-image: url('assets/background-6.png');">
+        <div class="slide-inner">
+          <h2>Folie 6: Platzhalter</h2>
+          <p>Hier kannst du deinen eigenen Inhalt für Folie 6 einfügen.</p>
+        </div>
+      </section>
+
+      <!-- FOLIE 7 -->
+      <section class="slide" id="slide-7" style="background-image: url('assets/background-7.png');">
+        <div class="slide-inner">
+          <h2>Folie 7: Platzhalter</h2>
+          <p>Hier kannst du deinen eigenen Inhalt für Folie 7 einfügen.</p>
+        </div>
+      </section>
+
+      <!-- FOLIE 8 -->
+      <section class="slide" id="slide-8" style="background-image: url('assets/background-8.png');">
+        <div class="slide-inner">
+          <h2>Folie 8: Platzhalter</h2>
+          <p>Hier kannst du deinen eigenen Inhalt für Folie 8 einfügen.</p>
+        </div>
+      </section>
+
+      <!-- FOLIE 9 -->
+      <section class="slide" id="slide-9" style="background-image: url('assets/background-9.png');">
+        <div class="slide-inner">
+          <h2>Folie 9: Platzhalter</h2>
+          <p>Hier kannst du deinen eigenen Inhalt für Folie 9 einfügen.</p>
+        </div>
+      </section>
+
+      <!-- FOLIE 10 -->
+      <section class="slide" id="slide-10" style="background-image: url('assets/background-10.png');">
+        <div class="slide-inner">
+          <h2>Folie 10: Platzhalter</h2>
+          <p>Hier kannst du deinen eigenen Inhalt für Folie 10 einfügen.</p>
+        </div>
+      </section>
+
+      <!-- FOLIE 11 -->
+      <section class="slide" id="slide-11" style="background-image: url('assets/background-11.png');">
+        <div class="slide-inner">
+          <h2>Folie 11: Platzhalter</h2>
+          <p>Hier kannst du deinen eigenen Inhalt für Folie 11 einfügen.</p>
+        </div>
+      </section>
+
+      <!-- FOLIE 12 -->
+      <section class="slide" id="slide-12" style="background-image: url('assets/background-12.png');">
+        <div class="slide-inner">
+          <h2>Folie 12: Zusammenfassung / Fazit</h2>
+          <p>Hier kannst du deinen eigenen Inhalt für Folie 12 einfügen.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Navigation Steuerung -->
+    <footer class="presentation-footer">
+      <a href="index.html" class="nav-btn back-home"><i class="fa-solid fa-mobile-screen"></i> Handy</a>
+      
+      <div class="controls">
+        <button id="prev-btn" class="nav-btn" disabled><i class="fa-solid fa-chevron-left"></i> Zurück</button>
+        <button id="next-btn" class="nav-btn">Weiter <i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    let currentSlide = 1;
+    const totalSlides = 12;
+
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const slideNumDisplay = document.getElementById('current-slide-num');
+
+    function updateSlides() {
+      document.querySelectorAll('.slide').forEach((slide, index) => {
+        if (index + 1 === currentSlide) {
+          slide.classList.add('active-slide');
+        } else {
+          slide.classList.remove('active-slide');
+        }
+      });
+
+      slideNumDisplay.innerText = currentSlide;
+      prevBtn.disabled = (currentSlide === 1);
+      nextBtn.disabled = (currentSlide === totalSlides);
+    }
+
+    nextBtn.addEventListener('click', () => {
+      if (currentSlide < totalSlides) {
+        currentSlide++;
+        updateSlides();
+      }
+    });
+
+    prevBtn.addEventListener('click', () => {
+      if (currentSlide > 1) {
+        currentSlide--;
+        updateSlides();
+      }
+    });
+  </script>
+</body>
+</html>
